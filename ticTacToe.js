@@ -16,4 +16,14 @@ let board = `
 `
 let Game = function() {
   this.board = board;
+  this.winner = false;
+  this.piecePlacment = [[0,0,0],[0,0,0],[0,0,0]];
 };
+
+Game.prototype.showBoard = function() {
+  //show current board
+  console.log(this.board);
+}
+
+let newGame = new Game();
+newGame.showBoard();
