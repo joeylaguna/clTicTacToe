@@ -5,35 +5,17 @@ var rl = readline.createInterface({
   output: process.stdout
 });
 
+/*
+needed methods:
+start game
+prompt
+way to switch player
+*/
 
-// let board = `
-//   ______________
-//  |    |    |    |
-//  |____|____|____|
-//  |    |    |    |
-//  |____|____|____|
-//  |    |    |    |
-//  |____|____|____|
-// `
+
 let Game = function() {
-  this.board = [
-    ['X',0, 0],
-    ['X','X',0],
-    ['X',0,'X']
-  ];
-  this.winner = undefined;
-  this.response;
-  this.piecePlacment = {
-  	'Top Left': 0,
-  	'Top Middle': 0,
-  	'Top Right': 0,
-  	'Middle Left': 0,
-  	'Middle Middle': 0,
-  	'Middle Right': 0,
-  	'Bottom Left': 0,
-  	'Bottom Middle': 0,
-  	'Bottom Right': 0
-  }
+  this.board = [[1,2,3], [4,5,6], [7,8,9]];
+  this.player = 'x';
 };
 
 Game.prototype.showBoard = function() {
